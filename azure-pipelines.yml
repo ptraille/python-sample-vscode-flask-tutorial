@@ -51,6 +51,7 @@ jobs:
       artifact: drop
 
 - job: DeploymentJob
+  dependsOn: BuildJob
 pool:
   vmImage: $(vmImageName)
   environment: $(environmentName)
